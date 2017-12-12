@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Title</title><script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
 </head>
 <body>
-<h1>lkasdjfsdklfjsdklfjsdklofjweoifjwekl;fjqwegfiojwrfkl;asfiwe89o0</h1>
+<div class="asd"></div>
+<div data-sd="sblj"></div>
 </body>
+<script>
+    $.ajax({
+        type:"post",
+        url:"index.php",
+        data:{"controller": 'UserController', "method": 'findUser', "account": 'asdasdasd', "password":'sbdl'},
+        success(e){
+           console.log(e);
+        }
+    })
+</script>
 </html>

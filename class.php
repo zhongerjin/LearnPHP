@@ -353,7 +353,7 @@ class Connection{
     }
 }
 class Find extends Connection {
-    public function FindAll()
+    public function SelectAll()
     {
         $sql = "select * from nice_content";
         $sth = $this->link->prepare($sql);
@@ -404,6 +404,11 @@ class Find extends Connection {
         $sth->bindValue(':key', $key);
         $sth->execute();
     }
+
+    public function FindAll()
+    {
+        $sql = "select * from test";
+    }
 }
 $sss = new Connection('mysql', 'localhost', 'root','123456', 'nicezandb');
 //$sth = $sss->connect();rrrr
@@ -415,7 +420,7 @@ $sss = new Connection('mysql', 'localhost', 'root','123456', 'nicezandb');
 //$sms->bindValue(':value', $aaa);
 //$sms->execute();
 $fff = new Find();
-//$fff->FindAll();
+//$fff->SelectAll();
 $fff->FindById('34');
 $fff->UpdateById('3','24232323');
 $fff->Insert('21123',"1");
